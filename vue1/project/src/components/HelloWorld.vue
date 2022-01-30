@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h3>create the following diagram in your language</h3>
-    <img alt="intro image" :src="'/intro.svg'" width="1300">
+    <img alt="intro image" :src="'/initial.png'">
     <div class="content">
       <table>
         <tr>

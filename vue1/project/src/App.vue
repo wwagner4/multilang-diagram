@@ -21,7 +21,15 @@ body {
   color: lightblue;
   background-color: #294445;
   margin-top: 4em;
-  font-size: xx-large;
+  font-size: large;
+}
+
+a:link {
+  color: lightblue;
+}
+
+a:visited {
+  color: lightblue;
 }
 
 </style>
