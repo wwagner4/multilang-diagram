@@ -6,15 +6,15 @@
       <table>
         <tr>
           <td>x label</td>
-          <td><input type="text" name="xlabel"></td>
+          <td><input v-model="x_label" placeholder="x label"></td>
         </tr>
         <tr>
           <td>y label</td>
-          <td><input type="text" name="ylabel"></td>
+          <td><input v-model="y_label" placeholder="y label"></td>
         </tr>
         <tr>
           <td>z label</td>
-          <td><input type="text" name="zlabel"></td>
+          <td><input v-model="z_label" placeholder="z label"></td>
         </tr>
         <tr>
           <td></td>
@@ -26,6 +26,18 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      x_label: 'Windgeschwindigkeit (km/h)',
+      y_label: 'Gefühlte Temperaturdifferenz (C°)',
+      z_label: 'Temperatur (°C)'
+    }
+  }
+}
+</script>
 
 <style scoped>
 .content {
