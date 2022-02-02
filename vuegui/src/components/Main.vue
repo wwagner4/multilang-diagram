@@ -19,7 +19,7 @@
         <tr>
           <td></td>
           <td>
-            <a href="#">create</a>
+            <button @click="create()">create</button>
           </td>
         </tr>
       </table>
@@ -34,6 +34,13 @@ export default {
       x_label: 'Windgeschwindigkeit (km/h)',
       y_label: 'Gefühlte Temperaturdifferenz (C°)',
       z_label: 'Temperatur (°C)'
+    }
+  },
+  methods: {
+    create () {
+      console.log(this.x_label)
+      console.log(this.y_label)
+      console.log(this.z_label)
     }
   }
 }
