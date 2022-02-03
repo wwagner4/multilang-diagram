@@ -24,6 +24,13 @@ def no_path(file: str):
     return file_response(dist_dir / file)
 
 
+@app.route("/create", methods=["POST"])
+def create():
+    data = flask.request.get_json()
+    print("creating", data)
+    return ""
+
+
 @app.route("/")
 def base():
     return file_response(dist_dir / "index.html")

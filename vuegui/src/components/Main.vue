@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
@@ -41,6 +43,17 @@ export default {
       console.log(this.x_label)
       console.log(this.y_label)
       console.log(this.z_label)
+      axios.post('/create', {
+        x_label: this.x_label,
+        y_label: this.y_label,
+        z_label: this.z_label
+      })
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
     }
   }
 }
