@@ -50,6 +50,8 @@ def file_response(file: Path) -> flask.Response:
         return flask.send_file(file, mimetype='text/html')
     if file_name.endswith("png"):
         return flask.send_file(file, mimetype='image/png')
+    if file_name.endswith("svg"):
+        return flask.send_file(file, mimetype='image/svg+xml')
     if file_name.endswith("ico"):
         return flask.send_file(file, mimetype='image/x-icon')
     if file_name.endswith("js"):

@@ -3,6 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import cm
+import datetime
 
 
 def windchill(t: float, v: float) -> float:
@@ -67,7 +68,8 @@ def create_diagram(
                            vmin=-20,
                            vmax=20)
     fig.colorbar(surf, shrink=0.6, aspect=20)
-    diagram_name = "diagram.svg"
+    time_stamp = '{:%H%M%S%f}'.format(datetime.datetime.now())
+    diagram_name = f"diagram-{time_stamp}.svg"
     fi = out_dir / diagram_name
     print(f"wrote image to {fi}")
     plt.savefig(fi, bbox_inches='tight')
