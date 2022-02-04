@@ -23,7 +23,11 @@ RUN echo "module.exports = { " \
           > vuegui/vue.config.js
 
 WORKDIR /app/vuegui
+RUN npm install
 RUN npm run build
 WORKDIR /app
 RUN rm -r vuegui
 
+ENV VUE_DISTRIBUTION_DIR=/app/vue
+
+ENTRYPOINT ["gunicorn", "-b", "localhost:4000", "multilangdia.app:app"]

@@ -32,3 +32,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 cd multilangdia/
 flask run
 ```
+
+### Docker
+
+```
+docker build -t md .
+docker run --network host -p 4000:4000 -t md
+```
