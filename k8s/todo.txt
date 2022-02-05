@@ -1,0 +1,5 @@
+- setup a local registry https://gist.github.com/trisberg/37c97b6cc53def9a3e38be6143786589
+  - use a shorter url. e.g wwagner4.local
+- start minicube with --insecure-registry <url of registry>
+- push image to the registry
+- create deployment and expose it to local computer https://medium.com/@xcoulon/deploying-your-first-web-app-on-minikube-6e98d2884b3a
