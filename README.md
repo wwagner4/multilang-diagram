@@ -36,6 +36,14 @@ flask run
 ### Docker
 
 ```
-docker build -t md .
-docker run --network host -p 4000:4000 -t md
+docker build -t multilang-diagram .
+```
+
+#### run
+```
+docker run --network host -t multilang-diagram
+```
+
+```
+docker-compose up
 ```

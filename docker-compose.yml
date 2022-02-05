@@ -1,0 +1,5 @@
+version: '3'
+services:
+  multilang-diagram:
+    image: multilang-diagram
+    network_mode: host

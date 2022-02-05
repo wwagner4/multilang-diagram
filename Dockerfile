@@ -29,5 +29,6 @@ WORKDIR /app
 RUN rm -r vuegui
 
 ENV VUE_DISTRIBUTION_DIR=/app/vue
+ENV PYTHONUNBUFFERED=TRUE
 
-ENTRYPOINT ["gunicorn", "-b", "localhost:4000", "multilangdia.app:app"]
+ENTRYPOINT ["gunicorn", "--log-level", "debug", "-b", "localhost:4005", "multilangdia.app:app"]
