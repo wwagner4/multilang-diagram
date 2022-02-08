@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: windchill
   labels:
-    app: webapp
+    app: windchill
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapp
+      app: windchill
   template:
     metadata:
       labels:
-        app: webapp
+        app: windchill
     spec:
       containers:
-        - image: multilang-diagram:latest
-          name: webapp
+        - image: localhost:5000/multilang-diagram/windchill
+          name: multilang-diagram
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4005
