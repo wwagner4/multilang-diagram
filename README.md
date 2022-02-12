@@ -1,6 +1,6 @@
 # project
 
-## Project setup
+## Vue Project setup
 ```
 cd vuegui/
 npm install
@@ -17,31 +17,21 @@ npm run serve
 cd vuegui/
 npm run build
 ```
-### Lints and fixes files
-```
-cd vuegui/
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-### Start server
+## Start server
 ```
 cd multilangdia/
 flask run
 ```
 
-### Docker
+## Docker
 
 ```
-docker build -t multilang-diagram .
+docker build -t multilang-diagram/windchill .
 ```
 
-#### run
 ```
-docker run --network host -t multilang-diagram
+docker run --network host  -t multilang-diagram/windchill
 ```
 
 ```
@@ -59,8 +49,8 @@ Have 'imagePullPolicy: Never' defined in your deployment.
 
 
 ```
-kubectl create -f k8s/d_server.yml
-kubectl delete -f k8s/d_server.yml
+kubectl create -f k8s/server.yml
+kubectl delete -f k8s/server.yml
 ```
 
 ```

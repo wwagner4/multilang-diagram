@@ -1,5 +1,5 @@
 version: '3'
 services:
   multilang-diagram:
-    image: multilang-diagram
+    image: multilang-diagram/windchill
     network_mode: host
