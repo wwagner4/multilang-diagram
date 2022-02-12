@@ -15,8 +15,8 @@ spec:
         app: windchill
     spec:
       containers:
-        - image: localhost:5000/multilang-diagram/windchill
-          name: multilang-diagram
-          imagePullPolicy: IfNotPresent
+        - name: windchill
+          image: multilang-diagram/windchill
+          imagePullPolicy: Never
           ports:
             - containerPort: 4005

@@ -47,3 +47,22 @@ docker run --network host -t multilang-diagram
 ```
 docker-compose up
 ```
+
+### Kubernetes
+
+```
+eval $(minikube -p minikube docker-env)
+minicube start
+```
+
+Have 'imagePullPolicy: Never' defined in your deployment.
+
+
+```
+kubectl create -f k8s/d_server.yml
+kubectl delete -f k8s/d_server.yml
+```
+
+```
+kubectl get all
+```
