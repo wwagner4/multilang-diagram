@@ -42,7 +42,7 @@ docker-compose up
 
 ```
 eval $(minikube -p minikube docker-env)
-minicube start
+minikube start
 ```
 
 Have 'imagePullPolicy: Never' defined in your deployment.
@@ -51,6 +51,10 @@ Have 'imagePullPolicy: Never' defined in your deployment.
 ```
 kubectl create -f k8s/server.yml
 kubectl delete -f k8s/server.yml
+```
+```
+kubectl create -f k8s/nodeport.yml
+kubectl delete -f k8s/nodeport.yml
 ```
 
 ```
