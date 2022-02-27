@@ -35,7 +35,10 @@ ENV PYTHONUNBUFFERED=TRUE
 RUN chgrp -R 0 $VUE_DISTRIBUTION_DIR && \
     chmod -R g=u $VUE_DISTRIBUTION_DIR
 
-
 EXPOSE 4005
+
+# OpenShift picks up this label and creates a service
+LABEL io.openshift.expose-services="4005/http"
+
 
 ENTRYPOINT ["gunicorn", "--log-level", "debug", "-b", "localhost:4005", "multilangdia.app:app"]
