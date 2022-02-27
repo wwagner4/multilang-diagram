@@ -31,4 +31,11 @@ RUN rm -r vuegui
 ENV VUE_DISTRIBUTION_DIR=/app/vue
 ENV PYTHONUNBUFFERED=TRUE
 
+# Enables open shift container user (which is not root) to write distribution dir
+RUN chgrp -R 0 $VUE_DISTRIBUTION_DIR && \
+    chmod -R g=u $VUE_DISTRIBUTION_DIR
+
+
+EXPOSE 4005
+
 ENTRYPOINT ["gunicorn", "--log-level", "debug", "-b", "localhost:4005", "multilangdia.app:app"]
