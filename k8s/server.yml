@@ -1,0 +1,24 @@
+# deployment named 'windchill' with a companion replica set.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: windchill
+  labels:
+    app: windchill
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: windchill
+  template:
+    metadata:
+      labels:
+        app: windchill
+    spec:
+      # Pod with one container
+      containers:
+        - name: windchill
+          image: multilang-diagram/windchill
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 4005
